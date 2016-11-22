@@ -1,0 +1,21 @@
+<script src="/socket.io/socket.io.js"></script>
+<script>
+
+    // var socket = io.connect('https://mqtt-mosca-zmwebdev.c9users.io/');
+    //var socket = io.connect('/');
+    var serverName = window.location.hostname;
+    var socket;
+    if ((serverName == "localhost") || (serverName == "127.0.0.1") || ((serverName.indexOf(".c9users.io") > -1))) {
+      // if is localhost or c9.io
+      socket = io();
+    } else {
+      // openshift
+      // https://developers.openshift.com/en/managing-port-binding-routing.html
+      socket = io('wss://'+serverName+':8443');
+    } 
+
+  socket.on('news', function (data) {
+    console.log(data);
+    socket.emit('my other event', { my: 'data' });
+  });
+</script>
