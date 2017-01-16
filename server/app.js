@@ -25,6 +25,8 @@ io.on('connection', function (socket) {
     console.log(data);
     // socket.broadcast.emit(data);
     socket.broadcast.emit('msg', data);
+    // emit to sender too
+    socket.emit('msg', data);
   });  
   
 });

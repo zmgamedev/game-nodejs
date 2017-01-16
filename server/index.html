@@ -21,13 +21,15 @@
   // msg recived
   socket.on('msg', function (data) {
     console.log(data);
+    // latency
+    console.log("latency: " + (Date.now() - data.timestamp).toString());
   });
   
   // send keypress
   document.addEventListener('keyup', (event) => {
     const keyName = event.key;
     console.log(keyName);
-    socket.emit('msg', { 'user' : 'todo', keypessed: keyName });  
+    socket.emit('msg', { 'user' : 'todo', 'keypessed': keyName, 'timestamp':Date.now() });  
   }, false);
   
 </script>
