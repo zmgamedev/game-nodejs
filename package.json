@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "start": "node server.js"
+    "start": "node ./server/app.js"
   },
-  "main": "server.js",
+  "main": "./server/app.js",
   "author": "",
   "dependencies": {
     "express": "^4.14.0",
