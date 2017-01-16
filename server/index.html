@@ -12,8 +12,14 @@
       socket = io('wss://'+serverName+':8443');
     } 
 
+  // init msg
   socket.on('news', function (data) {
     console.log(data);
     socket.emit('my other event', { my: 'data' });
   });
+  
+  // msg recived
+  socket.on('msg', function (data) {
+    console.log(data);
+  });  
 </script>
