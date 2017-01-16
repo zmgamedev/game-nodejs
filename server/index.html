@@ -26,7 +26,7 @@
   });
   
   // send keypress
-  document.addEventListener('keyup', (event) => {
+  document.addEventListener('keydown', (event) => {
     const keyName = event.key;
     console.log(keyName);
     socket.emit('msg', { 'user' : 'todo', 'keypessed': keyName, 'timestamp':Date.now() });  
