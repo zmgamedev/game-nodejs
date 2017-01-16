@@ -13,8 +13,5 @@
     "socket.io": "^1.6.0"
   },
 
-	"scripts" : {
-		"start": "node server/app.js"
-	},
-	"main": "server/app.js" 
+	"main": "./server/app.js" 
 }
