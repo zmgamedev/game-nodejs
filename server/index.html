@@ -21,5 +21,13 @@
   // msg recived
   socket.on('msg', function (data) {
     console.log(data);
-  });  
+  });
+  
+  // send keypress
+  document.addEventListener('keyup', (event) => {
+    const keyName = event.key;
+    console.log(keyName);
+    socket.emit('msg', { 'user' : 'todo', keypessed: keyName });  
+  }, false);
+  
 </script>
