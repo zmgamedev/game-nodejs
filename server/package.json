@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "start": "supervisor server/app.js"
+    "start": "node server/app.js"
   },
-  "main": "server/app.js",
+  "main": "app.js",
   "author": "",
   "dependencies": {
     "express": "^4.14.0",
