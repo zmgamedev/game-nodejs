@@ -14,7 +14,7 @@
   },
 
 	"scripts" : {
-		"start": "node app.js"
+		"start": "node server/app.js"
 	},
 	"main": "app.js" 
 }
